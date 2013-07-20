@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 var buff = new Buffer(30);
 
-var infile = "index.html"
+var infile = "index.html";
 
 buff.readFileSync(infile);
 
