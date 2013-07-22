@@ -2,11 +2,11 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var fs = require('fs');
+
 var buff = new Buffer(30);
 
-var infile = "index.html";
-
-buff.readFileSync(infile);
+var buff = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
   response.send(buff.toString());
